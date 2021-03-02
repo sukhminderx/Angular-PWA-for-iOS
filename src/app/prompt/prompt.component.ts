@@ -9,14 +9,15 @@ import { MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef } from '@angular/material/bott
 export class PromptComponent {
 
   constructor(
-    @Inject(MAT_BOTTOM_SHEET_DATA) public data: { mobileType: 'ios' | 'android', promptEvent?: any },
+    // @Inject(MAT_BOTTOM_SHEET_DATA) public data: { mobileType: 'ios' | 'android', promptEvent?: any },
+    @Inject(MAT_BOTTOM_SHEET_DATA) public data: { mobileType: 'ios' | 'android' },
     private bottomSheetRef: MatBottomSheetRef<PromptComponent>
   ) {}
 
-  public installPwa(): void {
-    this.data.promptEvent.prompt();
-    this.close();
-  }
+ // public installPwa(): void {
+ //   this.data.promptEvent.prompt();
+  //  this.close();
+  //}
 
   public close() {
     this.bottomSheetRef.dismiss();

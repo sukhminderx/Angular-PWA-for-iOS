@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { PromptComponent } from './prompt/prompt.component';
-import { PwaService } from './services/pwa.service';
+// import { PwaService } from './services/pwa.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 
-const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt();
+// const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt();
 
 
 @NgModule({
@@ -37,7 +37,7 @@ const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt()
   entryComponents: [
     PromptComponent,
   ],
-  providers: [{provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true}],
+//  providers: [{provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
